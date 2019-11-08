@@ -49,42 +49,42 @@
                <input type="checkbox" name="sauce" id="sauce" checked><span class="checkbox-custom"></span>
               </label>
             </div>
-            <div class="sauces">
+            <div class="sauces flex-box">
                 <div class="form-group">
                   <label>
                     <input type="radio" name="sauces" value="tomato sauce" checked>
-                    Tomato sauce
+                    <span>Tomato sauce</span>
                   </label>
                 </div>
                 <div class="form-group">
                   <label>
                     <input type="radio" name="sauces" value="marinara sauce">
-                    Marinara sauce
+                    <span>Marinara sauce</span>  
                   </label>
                 </div>
                 <div class="form-group">
                   <label>
                     <input type="radio" name="sauces" value="bbq sauce">
-                    BBQ sauce
+                    <span>BBQ sauce</span> 
                   </label>
                 </div>
                 <div class="form-group">
                   <label>
                     <input type="radio" name="sauces" value="garlic parmesan sauce">
-                    Garlic parmesan sauce
+                    <span>Garlic parmesan sauce</span> 
                   </label>
                 </div>
                 <div class="form-group">
                   <label>
                     <input type="radio" name="sauces" value="alfredo sauce">
-                    Alfredo sauce
+                    <span>Alfredo sauce</span> 
                   </label>
                 </div>
               </div>
           </div>
           <div class="innerBox">
             <h3>Choose meats:</h3>
-            <div class="form-group">
+            <div class="form-group flex-box">
               <label for="ham" class="checkbox-label">
                 Ham
                 <input type="checkbox" name="meats" id="ham"><span class="checkbox-custom"></span>
@@ -117,7 +117,7 @@
           </div>
           <div class="innerBox">
             <h3>Choose toppings:</h3>
-            <div class="form-group">
+            <div class="form-group flex-box">
               <label for="jalapeno" class="checkbox-label">
                 Jalapeno peppers
                 <input type="checkbox" name="toppings" id="jalapeno"><span class="checkbox-custom"></span> 
@@ -162,16 +162,11 @@
                 Feta cheese
                 <input type="checkbox" name="toppings" id="feta"><span class="checkbox-custom"></span>
               </label>
-              
-              
-              
             </div>
           </div>
-
-  
-          <button type="submit" class="btn btn-info">Get price</button>  
+          <button type="submit" class="btn btn-info" id="submitButton">Get price</button>  
         </form>
-        <div id="results">
+        <div class="innerBox" id="results">
           <h2>The cost of your pizza: $<span id="finalCost">0</span></h2>
         </div>
       </div>

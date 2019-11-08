@@ -61,22 +61,22 @@ $(document).ready(function() {
     $("#sizes").change(function() {
         switch (this.value) {
             case "10":
-                $(".small").css("display", "block");
-                $(".medium").css("display", "none");
-                $(".medium-large").css("display", "none");
-                $(".large").css("display", "none");
+                $(".small").show()
+                $(".medium").hide();
+                $(".medium-large").hide();
+                $(".large").hide();
                 break;
             case "12":
-                $(".small").css("display", "none");
-                $(".medium").css("display", "block");
-                $(".medium-large").css("display", "block");
-                $(".large").css("display", "none");
+                $(".small").hide();
+                $(".medium").show();
+                $(".medium-large").show();
+                $(".large").hide();
                 break;
             case "14":
-                $(".small").css("display", "none");
-                $(".medium").css("display", "none");
-                $(".medium-large").css("display", "block");
-                $(".large").css("display", "block");
+                $(".small").hide();
+                $(".medium").hide();
+                $(".medium-large").show();
+                $(".large").show();
                 break;
         }
     })
@@ -85,9 +85,9 @@ $(document).ready(function() {
         var chosenSauce = $(this).is(':checked');
         console.log(chosenSauce);
         if (chosenSauce) {
-            $(".sauces").css("display", "block");
+            $(".sauces").slideDown();
         } else {
-            $(".sauces").css("display", "none");
+            $(".sauces").slideUp();
         }
     })
 

@@ -31,6 +31,15 @@ body {
     margin-bottom: 20px;
 }
 
+.innerBox h3 {
+    margin-bottom: 20px;
+}
+
+#results {
+    margin-top: 30px;
+    text-align: center;
+}
+
 .checkbox-label {
     cursor: pointer;
     display: block;
@@ -102,3 +111,80 @@ body {
     background-color: transparent;
     border-radius: 0;
   }
+
+.flex-box {
+    display: grid;
+    width: 80%;
+    grid-template-columns: 1fr 1fr 1fr;
+    justify-items: end;
+}
+
+.sauces {
+    justify-items: start;
+}
+
+.form-group label {
+    cursor: pointer;
+}
+
+input[type="radio"] {
+    display: none;
+}
+
+input[type="radio"] + span {
+    line-height: 22px;
+    height: 22px;
+    padding-left: 32px;
+    display: block;
+    position: relative;
+}
+
+input[type="radio"] + span::before,
+input[type="radio"]+ span::after {
+    content: '';
+    width: 22px;
+    height: 22px;
+    display: block;
+    border-radius: 50%;
+    left: 0;
+    top: 0;
+    position: absolute;
+}
+
+input[type="radio"] + span::before {
+    background: #D1D7E3;
+    *transition: background .2s ease, transform .4s cubic-bezier(.175, .885, .32, 2);
+}
+input[type="radio"] + span::after {
+    background: #fff;
+    transform: scale(.78);
+    transition: transform .6s cubic-bezier(.175, .885, .32, 1.4);
+}
+
+input[type="radio"]:checked + span::before {
+    transform: scale(1.04);
+    background: #5D9BFB;
+}
+
+input[type="radio"]:checked + span::after {
+    transform: scale(.4);
+    transition: transform .3s ease;
+}
+
+#submitButton {
+    margin-left: 45%;
+    font-size: 30px;
+}
+
+
+@media screen and (max-width:1000px) {
+    .flex-box {
+        grid-template-columns: 1fr 1fr;
+    }
+}
+
+@media screen and (max-width: 770px) {
+    .flex-box {
+        grid-template-columns: 1fr;
+    }
+}
