@@ -1,6 +1,7 @@
 <!DOCTYPE html>
 <html>
   <head>
+    <link href="https://fonts.googleapis.com/css?family=Roboto&display=swap" rel="stylesheet">
     <link href="css/bootstrap.css" rel="stylesheet" type="text/css">
     <link href="css/styles.css" rel="stylesheet" type="text/css">
     <script src="js/jquery-3.4.1.js"></script>
@@ -9,95 +10,109 @@
   </head>
   <body>
     <div class="container">
-      <div class="jumbotron">
+      
+      <div id="box">
         <h1>Order pizza</h1>
-      </div>
-      <form id="pizzaForm">
-        <h3>Choose preffered size:</h3>
-        <select class="form-control" id="sizes">
-          <option value="10">Small Pizza (10 inches)</option>
-          <option value="12">Medium Pizza (12 inches)</option>
-          <option value="14">Large Pizza (14 inches)</option>
-        </select>
-        <h3>Choose crust:</h3>
-        <select class="form-control" id="crusts">
-          <option>Hand-tossed</option>
-          <option class="large">Brooklyn style</option>
-          <option class="medium-large">Crunchy thin crust</option>
-          <option class="medium">Handmade pan</option>
-          <option class="small">Gluten free crust</option>
-        </select>
-        <h3>Choose cheese:</h3>
-        <div class="form-group">
-          <input type="checkbox" name="cheese" checked>Cheese<br>
-        </div>
-        <h3>Choose sauce:</h3>
-        <div class="form-group">
-          <input type="checkbox" name="sauce" id="sauce" checked>Sauce<br>
-        </div>
-        <div class="sauces">
-          <h3>Choose type of sauce:</h3>
-          <div class="form-group">
-            <label>
-              <input type="radio" name="sauces" value="tomato sauce" checked>
-              Tomato sauce
-            </label>
+        <form id="pizzaForm">
+          <div class="innerBox">
+            <h3>Choose preffered size:</h3>
+            <select class="form-control" id="sizes">
+              <option value="10">Small Pizza (10 inches)</option>
+              <option value="12">Medium Pizza (12 inches)</option>
+              <option value="14">Large Pizza (14 inches)</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label>
-              <input type="radio" name="sauces" value="marinara sauce">
-              Marinara sauce
-            </label>
+          <div class="innerBox">
+            <h3>Choose crust:</h3>
+            <select class="form-control" id="crusts">
+              <option>Hand-tossed</option>
+              <option class="large">Brooklyn style</option>
+              <option class="medium-large">Crunchy thin crust</option>
+              <option class="medium">Handmade pan</option>
+              <option class="small">Gluten free crust</option>
+            </select>
           </div>
-          <div class="form-group">
-            <label>
-              <input type="radio" name="sauces" value="bbq sauce">
-              BBQ sauce
-            </label>
+          <div class="innerBox">
+            <h3>Choose cheese:</h3>
+            <div class="form-group">
+              <input type="checkbox" name="cheese" checked>Cheese<br>
+            </div>
           </div>
-          <div class="form-group">
-            <label>
-              <input type="radio" name="sauces" value="garlic parmesan sauce">
-              Garlic parmesan sauce
-            </label>
+          <div class="innerBox">
+            <h3>Choose sauce:</h3>
+            <div class="form-group">
+              <input type="checkbox" name="sauce" id="sauce" checked>Sauce<br>
+            </div>
+            <div class="sauces">
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="sauces" value="tomato sauce" checked>
+                    Tomato sauce
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="sauces" value="marinara sauce">
+                    Marinara sauce
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="sauces" value="bbq sauce">
+                    BBQ sauce
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="sauces" value="garlic parmesan sauce">
+                    Garlic parmesan sauce
+                  </label>
+                </div>
+                <div class="form-group">
+                  <label>
+                    <input type="radio" name="sauces" value="alfredo sauce">
+                    Alfredo sauce
+                  </label>
+                </div>
+              </div>
           </div>
-          <div class="form-group">
-            <label>
-              <input type="radio" name="sauces" value="alfredo sauce">
-              Alfredo sauce
-            </label>
+          <div class="innerBox">
+            <h3>Choose meats:</h3>
+            <div class="form-group">
+              <input type="checkbox" name="meats">Ham<br>
+              <input type="checkbox" name="meats">Pepperoni<br>
+              <input type="checkbox" name="meats">Beef<br>
+              <input type="checkbox" name="meats">Salami<br>
+              <input type="checkbox" name="meats">Italian sausage<br>
+              <input type="checkbox" name="meats">Chicken<br>
+              <input type="checkbox" name="meats">Bacon<br>
+            </div>
           </div>
-        </div>
-        <h3>Choose meats:</h3>
-        <div class="form-group">
-          <input type="checkbox" name="meats">Ham<br>
-          <input type="checkbox" name="meats">Pepperoni<br>
-          <input type="checkbox" name="meats">Beef<br>
-          <input type="checkbox" name="meats">Salami<br>
-          <input type="checkbox" name="meats">Italian sausage<br>
-          <input type="checkbox" name="meats">Chicken<br>
-          <input type="checkbox" name="meats">Bacon<br>
-        </div>
-        <h3>Choose toppings:</h3>
-        <div class="form-group">
-          <input type="checkbox" name="toppings">Jalapeno peppers<br>
-          <input type="checkbox" name="toppings">Onions<br>
-          <input type="checkbox" name="toppings">Diced tomatoes<br>
-          <input type="checkbox" name="toppings">Black olives<br>
-          <input type="checkbox" name="toppings">Mushrooms<br>
-          <input type="checkbox" name="toppings">Pineapple<br>
-          <input type="checkbox" name="toppings">Provolone cheese<br>
-          <input type="checkbox" name="toppings">Cheddar cheese<br>
-          <input type="checkbox" name="toppings">Green peppers<br>
-          <input type="checkbox" name="toppings">Spinach<br>
-          <input type="checkbox" name="toppings">Feta cheese<br>
-        </div>
+          <div class="innerBox">
+            <h3>Choose toppings:</h3>
+            <div class="form-group">
+              <input type="checkbox" name="toppings">Jalapeno peppers<br>
+              <input type="checkbox" name="toppings">Onions<br>
+              <input type="checkbox" name="toppings">Diced tomatoes<br>
+              <input type="checkbox" name="toppings">Black olives<br>
+              <input type="checkbox" name="toppings">Mushrooms<br>
+              <input type="checkbox" name="toppings">Pineapple<br>
+              <input type="checkbox" name="toppings">Provolone cheese<br>
+              <input type="checkbox" name="toppings">Cheddar cheese<br>
+              <input type="checkbox" name="toppings">Green peppers<br>
+              <input type="checkbox" name="toppings">Spinach<br>
+              <input type="checkbox" name="toppings">Feta cheese<br>
+            </div>
+          </div>
 
-        <button type="submit" class="btn btn-info">Get price</button>  
-      </form>
-      <div id="results">
-        <h2>The cost of your pizza: $<span id="finalCost">0</span></h2>
+  
+          <button type="submit" class="btn btn-info">Get price</button>  
+        </form>
+        <div id="results">
+          <h2>The cost of your pizza: $<span id="finalCost">0</span></h2>
+        </div>
       </div>
+
     </div>
   </body>
 </html>

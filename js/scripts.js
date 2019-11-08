@@ -9,14 +9,6 @@ function Pizza(size, crust, cheese, hasSauce, sauce, meats, toppings) {
     this.price = 0
 }
 
-// Pizza.prototype.addTopping = function (topping) {
-//     this.toppings.push(topping);
-// }
-
-// Pizza.prototype.changeSize = function (size) {
-//     this.size = size;
-// }
-
 Pizza.prototype.calculatePrice = function() {
 
     switch (this.size) {
@@ -33,8 +25,6 @@ Pizza.prototype.calculatePrice = function() {
 
     switch (this.crust) {
         case "Handmade pan":
-            this.price += 3;
-            break;
         case "Gluten free crust":
             this.price += 1.5;
             break;
@@ -121,7 +111,6 @@ $(document).ready(function() {
         })
 
         var pizza = new Pizza(chosenSize, chosenCrust, chosenCheese,hasSauce,chosenSauce,chosenMeats,chosenToppings);
-        console.log(pizza);
         var cost = pizza.calculatePrice();
         $("#finalCost").text(cost);
     })
