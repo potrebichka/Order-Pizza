@@ -29,3 +29,28 @@ body {
     padding: 10px;
     margin-bottom: 20px;
 }
+
+.checkbox-label {
+    cursor: pointer;
+    display: block;
+}
+
+.checkbox-label input {
+    *position: absolute;
+    opacity: 0;
+    cursor: pointer;
+}
+
+.checkbox-label .checkbox-custom {
+    *position: absolute;
+    height: 24px;
+    width: 24px;
+    background-color: transparent;
+    border-radius: 5px;
+    transition: all 0.3s ease-out;
+    -webkit-transition: all 0.3s ease-out;
+    -moz-transition: all 0.3s ease-out;
+    -ms-transition: all 0.3s ease-out;
+    -o-transition: all 0.3s ease-out;
+    border: 2px solid #FFFFFF;
+}

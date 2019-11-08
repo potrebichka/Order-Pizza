@@ -12,7 +12,7 @@
     <div class="container">
       
       <div id="box">
-        <h1>Order pizza</h1>
+        <h1>Make your own pizza</h1>
         <form id="pizzaForm">
           <div class="innerBox">
             <h3>Choose preffered size:</h3>
@@ -35,13 +35,18 @@
           <div class="innerBox">
             <h3>Choose cheese:</h3>
             <div class="form-group">
-              <input type="checkbox" name="cheese" checked>Cheese<br>
+              <label for="cheese" class="checkbox-label">
+                <input type="checkbox" name="cheese" id="cheese" checked> <span class="checkbox-custom rectangular">  X </span>
+                Cheese
+              </label>
             </div>
           </div>
           <div class="innerBox">
             <h3>Choose sauce:</h3>
             <div class="form-group">
-              <input type="checkbox" name="sauce" id="sauce" checked>Sauce<br>
+              <label for="sauce" class="checkbox-label">
+               <input type="checkbox" name="sauce" id="sauce" checked>Sauce
+              </label>
             </div>
             <div class="sauces">
                 <div class="form-group">
@@ -79,29 +84,86 @@
           <div class="innerBox">
             <h3>Choose meats:</h3>
             <div class="form-group">
-              <input type="checkbox" name="meats">Ham<br>
-              <input type="checkbox" name="meats">Pepperoni<br>
-              <input type="checkbox" name="meats">Beef<br>
-              <input type="checkbox" name="meats">Salami<br>
-              <input type="checkbox" name="meats">Italian sausage<br>
-              <input type="checkbox" name="meats">Chicken<br>
-              <input type="checkbox" name="meats">Bacon<br>
+              <label for="ham" class="checkbox-label">
+                <input type="checkbox" name="meats" id="ham">
+                Ham
+              </label>
+              <label for="pepperoni" class="checkbox-label">
+                <input type="checkbox" name="meats" id="pepperoni">
+                Pepperoni
+              </label>
+              <label for="beef" class="checkbox-label">
+                <input type="checkbox" name="meats" id="beef">
+                Beef
+              </label>
+              <label for="salami" class="checkbox-label">
+                <input type="checkbox" name="meats" id="salami">
+                Salami
+              </label>
+              <label for="sausage" class="checkbox-label">
+                <input type="checkbox" name="meats" id="sausage">
+                Italian sausage
+              </label>
+              <label for="chicken" class="checkbox-label">
+                <input type="checkbox" name="meats">
+                Chicken
+              </label>
+              <label for="bacon" class="checkbox-label">
+                <input type="checkbox" name="meats">
+                Bacon
+              </label>
             </div>
           </div>
           <div class="innerBox">
             <h3>Choose toppings:</h3>
             <div class="form-group">
-              <input type="checkbox" name="toppings">Jalapeno peppers<br>
-              <input type="checkbox" name="toppings">Onions<br>
-              <input type="checkbox" name="toppings">Diced tomatoes<br>
-              <input type="checkbox" name="toppings">Black olives<br>
-              <input type="checkbox" name="toppings">Mushrooms<br>
-              <input type="checkbox" name="toppings">Pineapple<br>
-              <input type="checkbox" name="toppings">Provolone cheese<br>
-              <input type="checkbox" name="toppings">Cheddar cheese<br>
-              <input type="checkbox" name="toppings">Green peppers<br>
-              <input type="checkbox" name="toppings">Spinach<br>
-              <input type="checkbox" name="toppings">Feta cheese<br>
+              <label for="jalapeno" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="jalapeno">
+                Jalapeno peppers
+              </label>
+              <label for="onions" class="checkbox-label">
+                <input type="checkbox" name="toppings">
+                Onions
+              </label>
+              <label for="tomatoes" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="tomatoes">
+                Diced tomatoes
+              </label>
+              <label for="olives" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="olives">
+                Black olives
+              </label> 
+              <label for="mushrooms" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="mushrooms">
+                Mushrooms
+              </label>
+              <label for="pineapple" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="pineapple">
+                Pineapple
+              </label>
+              <label for="provolone" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="provolone">
+                Provolone cheese
+              </label>
+              <label for="cheddar" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="cheddar">
+                Cheddar cheese
+              </label>
+              <label for="peppers" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="peppers">
+                Green peppers
+              </label>
+              <label for="spinach" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="spinach">
+                Spinach
+              </label>
+              <label for="feta" class="checkbox-label">
+                <input type="checkbox" name="toppings" id="feta">
+                Feta cheese
+              </label>
+              
+              
+              
             </div>
           </div>
 
