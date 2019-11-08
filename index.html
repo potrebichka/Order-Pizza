@@ -8,9 +8,30 @@
     <title></title>
   </head>
   <body>
-
-
-
-
+    <div class="container">
+      <div class="jumbotron">
+        <h1>Order pizza</h1>
+      </div>
+      <form id="pizzaForm">
+        <h3>Choose toppings:</h2>
+        <select class="form-control" id="toppings">
+          <option value="cheese">Cheese</option>
+          <option value="pepperoni">Pepperoni</option>
+          <option value="artichoke">Artichoke</option>
+          <option value="anchovy">Anchovy</option>
+        </select>
+        <h3>Choose preffered size:</h2>
+        <select class="form-control" id="sizes">
+          <option value="10">Small Pizza (10 inches)</option>
+          <option value="12">Medium Pizza (12 inches)</option>
+          <option value="14">Large Pizza (14 inches)</option>
+          <option value="16">Extra-large Pizza (16 inches)</option>
+        </select>
+        <button type="submit" class="btn btn-info">Get price</button>  
+      </form>
+      <div id="results">
+        <h2>The cost of your pizza: $<span id="finalCost">0</span></h1>
+      </div>
+    </div>
   </body>
 </html>
