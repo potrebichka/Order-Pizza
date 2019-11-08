@@ -18,54 +18,55 @@
           <option value="10">Small Pizza (10 inches)</option>
           <option value="12">Medium Pizza (12 inches)</option>
           <option value="14">Large Pizza (14 inches)</option>
-          <option value="16">Extra-large Pizza (16 inches)</option>
         </select>
         <h3>Choose crust:</h3>
         <select class="form-control" id="crusts">
-          <option value="0">Brooklyn style</option>
-          <option value="0">Hand-tossed</option>
-          <option value="0">Crunchy thin crust</option>
-          <option value="3">Handmade pan</option>
-          <option value="1.5">Gluten free crust</option>
+          <option>Hand-tossed</option>
+          <option class="large">Brooklyn style</option>
+          <option class="medium-large">Crunchy thin crust</option>
+          <option class="medium">Handmade pan</option>
+          <option class="small">Gluten free crust</option>
         </select>
         <h3>Choose cheese:</h3>
         <div class="form-group">
-          <input type="checkbox" name="cheese" value="cheese">Cheese<br>
+          <input type="checkbox" name="cheese" checked>Cheese<br>
         </div>
         <h3>Choose sauce:</h3>
         <div class="form-group">
-          <input type="checkbox" name="cheese" value="sauce">Sauce<br>
+          <input type="checkbox" name="sauce" id="sauce" checked>Sauce<br>
         </div>
-        <h3>Choose type of sauce:</h3>
-        <div class="form-group">
-          <label>
-            <input type="radio" name="sauces" value="tomato" checked>
-            Tomato sauce
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <input type="radio" name="sauces" value="marinara">
-            Marinara sauce
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <input type="radio" name="sauces" value="bbq">
-            BBQ sauce
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <input type="radio" name="sauces" value="garlic">
-            Garlic parmesan sauce
-          </label>
-        </div>
-        <div class="form-group">
-          <label>
-            <input type="radio" name="sauces" value="alfredo">
-            Alfredo sauce
-          </label>
+        <div class="sauces">
+          <h3>Choose type of sauce:</h3>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="sauces" value="tomato sauce" checked>
+              Tomato sauce
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="sauces" value="marinara sauce">
+              Marinara sauce
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="sauces" value="bbq sauce">
+              BBQ sauce
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="sauces" value="garlic parmesan sauce">
+              Garlic parmesan sauce
+            </label>
+          </div>
+          <div class="form-group">
+            <label>
+              <input type="radio" name="sauces" value="alfredo sauce">
+              Alfredo sauce
+            </label>
+          </div>
         </div>
         <h3>Choose meats:</h3>
         <div class="form-group">
