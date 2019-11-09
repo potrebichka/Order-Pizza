@@ -87,31 +87,31 @@
             <div class="form-group flex-box">
               <label for="ham" class="checkbox-label">
                 Ham
-                <input type="checkbox" name="meats" id="ham"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="ham" value="ham"><span class="checkbox-custom"></span>
               </label>
               <label for="pepperoni" class="checkbox-label">
                 Pepperoni
-                <input type="checkbox" name="meats" id="pepperoni"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="pepperoni" value="pepperoni"><span class="checkbox-custom"></span>
               </label>
               <label for="beef" class="checkbox-label">
                 Beef
-                <input type="checkbox" name="meats" id="beef"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="beef" value="beef"><span class="checkbox-custom"></span>
               </label>
               <label for="salami" class="checkbox-label">
                 Salami
-                <input type="checkbox" name="meats" id="salami"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="salami" value="salami"><span class="checkbox-custom"></span>
               </label>
               <label for="sausage" class="checkbox-label">
                 Italian sausage
-                <input type="checkbox" name="meats" id="sausage"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="sausage" value="sausage"><span class="checkbox-custom"></span>
               </label>
               <label for="chicken" class="checkbox-label">
                 Chicken
-                <input type="checkbox" name="meats"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="chicken" value="chicken"><span class="checkbox-custom"></span>
               </label>
               <label for="bacon" class="checkbox-label">
                 Bacon
-                <input type="checkbox" name="meats"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="meats" id="bacon" value="bacon"><span class="checkbox-custom"></span>
               </label>
             </div>
           </div>
@@ -120,47 +120,47 @@
             <div class="form-group flex-box">
               <label for="jalapeno" class="checkbox-label">
                 Jalapeno peppers
-                <input type="checkbox" name="toppings" id="jalapeno"><span class="checkbox-custom"></span> 
+                <input type="checkbox" name="toppings" id="jalapeno" value="jalapeno peppers"><span class="checkbox-custom"></span> 
               </label>
               <label for="onions" class="checkbox-label">
                 Onions
-                <input type="checkbox" name="toppings"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" value="onions" id="onions"><span class="checkbox-custom"></span>
               </label>
               <label for="tomatoes" class="checkbox-label">
                 Diced tomatoes
-                <input type="checkbox" name="toppings" id="tomatoes"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="tomatoes" value="diced tomatoes"><span class="checkbox-custom"></span>
               </label>
               <label for="olives" class="checkbox-label">
                 Black olives
-                <input type="checkbox" name="toppings" id="olives"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="olives" value="black olives"><span class="checkbox-custom"></span>
               </label> 
               <label for="mushrooms" class="checkbox-label">
                 Mushrooms
-                <input type="checkbox" name="toppings" id="mushrooms"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="mushrooms" value="mushrooms"><span class="checkbox-custom"></span>
               </label>
               <label for="pineapple" class="checkbox-label">
                 Pineapple
-                <input type="checkbox" name="toppings" id="pineapple"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="pineapple" value="pineapple"><span class="checkbox-custom"></span>
               </label>
               <label for="provolone" class="checkbox-label">
                 Provolone cheese
-                <input type="checkbox" name="toppings" id="provolone"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="provolone" value="provolone cheese"><span class="checkbox-custom"></span>
               </label>
               <label for="cheddar" class="checkbox-label">
                 Cheddar cheese
-                <input type="checkbox" name="toppings" id="cheddar"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="cheddar" value="cheddar cheese"><span class="checkbox-custom"></span>
               </label>
               <label for="peppers" class="checkbox-label">
                 Green peppers
-                <input type="checkbox" name="toppings" id="peppers"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="peppers" value="green peppers"><span class="checkbox-custom"></span>
               </label>
               <label for="spinach" class="checkbox-label">
                 Spinach
-                <input type="checkbox" name="toppings" id="spinach"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="spinach" value=spinach><span class="checkbox-custom"></span>
               </label>
               <label for="feta" class="checkbox-label">
                 Feta cheese
-                <input type="checkbox" name="toppings" id="feta"><span class="checkbox-custom"></span>
+                <input type="checkbox" name="toppings" id="feta" value="feta cheese"><span class="checkbox-custom"></span>
               </label>
             </div>
           </div>
@@ -168,6 +168,9 @@
         </form>
         <div class="innerBox" id="results">
           <h2>The cost of your pizza: $<span id="finalCost">0</span></h2>
+          <div id="result">
+            You chose <span id="sizeDisplay"></span>" pizza with the next ingredients: <span id="ingredientsDisplay"></span>
+          </div>
         </div>
       </div>
 

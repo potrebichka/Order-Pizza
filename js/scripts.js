@@ -113,6 +113,9 @@ $(document).ready(function() {
         var pizza = new Pizza(chosenSize, chosenCrust, chosenCheese,hasSauce,chosenSauce,chosenMeats,chosenToppings);
         var cost = pizza.calculatePrice();
         $("#finalCost").text(cost);
+        $("#result").show();
+        $("#sizeDisplay").text(chosenSize);
+        $("#ingredientsDisplay").text(chosenCrust + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")) 
     })
 
 

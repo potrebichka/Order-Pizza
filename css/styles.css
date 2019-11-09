@@ -40,6 +40,13 @@ body {
     text-align: center;
 }
 
+#result {
+    display: none;
+    font-size: 25px;
+    text-decoration: underline;
+    margin-top: 20px;
+}
+
 .checkbox-label {
     cursor: pointer;
     display: block;
