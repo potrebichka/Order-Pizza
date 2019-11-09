@@ -165,13 +165,28 @@
             </div>
           </div>
           <button type="submit" class="btn btn-info" id="submitButton">Get price</button>  
+          <button type="button" class="btn btn-info" id="cartButton">Cart</button>
         </form>
         <div class="innerBox" id="results">
           <h2>The cost of your pizza: $<span id="finalCost">0</span></h2>
           <div id="result">
             You chose <span id="sizeDisplay"></span>" pizza with the next ingredients: <span id="ingredientsDisplay"></span>
           </div>
+          <button type="button" class="btn btn-info" id="orderButton">Add to cart</button>
         </div>
+      </div>
+
+      <!-- The Modal -->
+      <div id="myCart" class="modal">
+        <!-- Modal content -->
+        <div class="cart-content">
+          <span class="close">&times;</span>
+          <h2>Cart:</h2>
+          <ul id="orderList">
+            
+          </ul>
+        </div>
+  
       </div>
 
     </div>

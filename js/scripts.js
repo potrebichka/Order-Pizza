@@ -114,9 +114,30 @@ $(document).ready(function() {
         var cost = pizza.calculatePrice();
         $("#finalCost").text(cost);
         $("#result").show();
+        $("#orderButton").show();
         $("#sizeDisplay").text(chosenSize);
-        $("#ingredientsDisplay").text(chosenCrust + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")) 
+        $("#ingredientsDisplay").text(chosenCrust + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")); 
+    });
+
+    $("#cartButton").click (function() {
+        $("#myCart").show();
+    });
+
+    $("#orderButton").click(function() {
+        $("#orderList").append("<li>" + $("#ingredientsDisplay").text() + " - $" + $("#finalCost").text() +"</li>");
     })
+
+    // When the user clicks on <span> (x), close the modal
+    $(".close").click(function() {
+        $("#myCart").hide();
+    });
+
+    // When the user clicks anywhere outside of the modal, close it
+    $(window).click(function(event) {
+        if (event.target == $("#myCart")) {
+            $("#myCart").hide();
+        }
+    });
 
 
 });
