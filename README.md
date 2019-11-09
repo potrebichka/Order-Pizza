@@ -10,16 +10,18 @@ _A website for a pizza company where a user can choose one or more individual to
 
 ## Setup/Installation Requirements
 
-//CHANGE LATER
 * _Open page in browser._
-* _Enter your name, initial deposit and register your account._
-* _You can withdraw and deposit moneys from/to you account._
-* _Get you results in current balance in result's box._
+* _Build your own pizza with different crusts, cheese or no cheese, different sauces or no sauces, different meats, differents toppings._
+* _Get final cost and brief description of built pizza._
 
 ## Specifications:
-* User can choose from different toppings.
-* User can choose different size of pizza.
-* User can get final cost depending on choosen toopings and size.
+* User can choose different sizes of pizza.
+* User can choose different crusts for pizza. Variety depends on size.
+* User can add cheese to pizza.
+* User can add sauce to pizza. There are different sauces available.
+* User can add different meats to pizza. 
+* User can add different toppings to pizza.
+* User can get final cost depending on choosen toopings and size. User also get brief description of chosen pizza.
 
 ## Technologies Used
 
