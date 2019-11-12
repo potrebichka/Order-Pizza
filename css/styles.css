@@ -205,16 +205,16 @@ input[type="radio"]:checked + span::after {
     height: auto; 
     overflow: auto; /* Enable scroll if needed */
     background-color: rgb(0,0,0); /* Fallback color */
-    background-color: rgba(0,0,0,0.8); /* Black w/ opacity */
+    background-color: rgba(0,0,0,0.9); /* Black w/ opacity */
   }
   
   /* Modal Content */
-  .modal-content {
-    background-color: #fefefe;
+  .cart-content {
+    *background-color: #fefefe;
     margin: auto;
-    padding: 20px;
+    padding: 50px;
     border: 1px solid #888;
-    width: 80%;
+    *width: 80%;
   }
 
   /* The Close Button */

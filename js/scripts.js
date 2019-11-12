@@ -58,6 +58,8 @@ Pizza.prototype.calculatePrice = function() {
 }
 
 $(document).ready(function() {
+    var total = 0;
+
     $("#sizes").change(function() {
         switch (this.value) {
             case "10":
@@ -108,7 +110,7 @@ $(document).ready(function() {
         var chosenToppings = [];
         $("input:checkbox[name=toppings]:checked").each(function() {
             chosenToppings.push($(this).val());
-        })
+        });
 
         var pizza = new Pizza(chosenSize, chosenCrust, chosenCheese,hasSauce,chosenSauce,chosenMeats,chosenToppings);
         var cost = pizza.calculatePrice();
@@ -116,7 +118,7 @@ $(document).ready(function() {
         $("#result").show();
         $("#orderButton").show();
         $("#sizeDisplay").text(chosenSize);
-        $("#ingredientsDisplay").text(chosenCrust + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")); 
+        $("#ingredientsDisplay").text(chosenSize + "'', " + chosenCrust.toLowerCase() + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")); 
     });
 
     $("#cartButton").click (function() {
@@ -125,6 +127,8 @@ $(document).ready(function() {
 
     $("#orderButton").click(function() {
         $("#orderList").append("<li>" + $("#ingredientsDisplay").text() + " - $" + $("#finalCost").text() +"</li>");
+        total += parseFloat($("#finalCost").text());
+        $("#total").text(total.toFixed(2));
     })
 
     // When the user clicks on <span> (x), close the modal
@@ -132,12 +136,7 @@ $(document).ready(function() {
         $("#myCart").hide();
     });
 
-    // When the user clicks anywhere outside of the modal, close it
-    $(window).click(function(event) {
-        if (event.target == $("#myCart")) {
-            $("#myCart").hide();
-        }
-    });
+
 
 
 });
