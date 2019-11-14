@@ -6,7 +6,8 @@ function Pizza(size, crust, cheese, hasSauce, sauce, meats, toppings) {
     this.sauce = sauce,
     this.meats = meats,
     this.toppings = toppings,
-    this.price = 0
+    this.price = 0,
+    this.ingredientsDisplay = size + "'', " + crust.toLowerCase() + " crust," + (cheese ? " cheese,": " no cheese,") + (hasSauce ? (sauce + ", ") : " no sauce,") + (meats.length > 0 ? (meats.join(", ")  + ", "): " no meat, ") + (toppings.length > 0 ? toppings.join(", ") : " no toppings");
 }
 
 Pizza.prototype.calculatePrice = function() {
@@ -57,8 +58,25 @@ Pizza.prototype.calculatePrice = function() {
     return this.price.toFixed(2);
 }
 
+function Cart() {
+    this.items = [],
+    this.total = 0,
+    this.ingredientsDisplay = ""
+}
+
+Cart.prototype.addItem = function(item, ingredientsDisplay) {
+    this.items.push(item);
+    this.total += item.price;
+}
+
+Cart.prototype.removeItem = function(index) {
+    this.total -= this.items[index].price;
+    this.items = this.items.slice(0, index).concat(this.items.slice(index+1));
+}
+
 $(document).ready(function() {
-    var total = 0;
+    let cart = new Cart;
+    var pizza;
 
     $("#sizes").change(function() {
         switch (this.value) {
@@ -85,7 +103,6 @@ $(document).ready(function() {
 
     $("#sauce").change(function() {
         var chosenSauce = $(this).is(':checked');
-        console.log(chosenSauce);
         if (chosenSauce) {
             $(".sauces").slideDown();
         } else {
@@ -112,13 +129,13 @@ $(document).ready(function() {
             chosenToppings.push($(this).val());
         });
 
-        var pizza = new Pizza(chosenSize, chosenCrust, chosenCheese,hasSauce,chosenSauce,chosenMeats,chosenToppings);
+        pizza = new Pizza(chosenSize, chosenCrust, chosenCheese,hasSauce,chosenSauce,chosenMeats,chosenToppings);
         var cost = pizza.calculatePrice();
         $("#finalCost").text(cost);
         $("#result").show();
         $("#orderButton").show();
         $("#sizeDisplay").text(chosenSize);
-        $("#ingredientsDisplay").text(chosenSize + "'', " + chosenCrust.toLowerCase() + " crust," + (chosenCheese ? " cheese,": " no cheese,") + (hasSauce ? (chosenSauce + ", ") : " no sauce,") + (chosenMeats.length > 0 ? (chosenMeats.join(", ")  + ", "): " no meat, ") + (chosenToppings.length > 0 ? chosenToppings.join(", ") : " no toppings")); 
+        $("#ingredientsDisplay").text(pizza.ingredientsDisplay); 
     });
 
     $("#cartButton").click (function() {
@@ -126,9 +143,12 @@ $(document).ready(function() {
     });
 
     $("#orderButton").click(function() {
-        $("#orderList").append("<li>" + $("#ingredientsDisplay").text() + " - $" + $("#finalCost").text() +"</li>");
-        total += parseFloat($("#finalCost").text());
-        $("#total").text(total.toFixed(2));
+        cart.addItem(pizza);
+        $("#orderList").append(`<li>${pizza.ingredientsDisplay} - $${pizza.price.toFixed(2)}  <input type="checkbox" name="cart"><span class="checkbox-custom"></span></li>`);
+        $("#total").text(cart.total.toFixed(2));
+        $("#orderButton").hide();
+        $("#result").hide();
+        $("#finalCost").text(0);
     })
 
     // When the user clicks on <span> (x), close the modal
@@ -136,7 +156,23 @@ $(document).ready(function() {
         $("#myCart").hide();
     });
 
+    $("#checkoutButton").click(function() {
+        window.location.reload();
+    });
 
+    $("#removeButton").click(function() {
+
+        for (let i = $("input:checkbox[name=cart]").length-1; i >= 0; i--) {
+            let item = $("input:checkbox[name=cart]")[i];
+        
+            if ($(item).is(":checked")) {
+                $(item).parent().remove();
+                cart.removeItem(i);
+            }
+        }
+
+        $("#total").text(cart.total.toFixed(2));
+    })
 
 
 });

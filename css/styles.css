@@ -182,14 +182,14 @@ input[type="radio"]:checked + span::after {
     font-size: 30px;
 }
 
-#submitButton {
-    margin-left: 35%;
+#orderButton {
     font-size: 30px;
+    margin-top: 20px;
+    display: none;
 }
 
-#orderButton {
-    display: none;
-    margin-top: 20px;
+#submitButton {
+    margin-left: 35%;
     font-size: 30px;
 }
 
